@@ -1,0 +1,35 @@
+{
+  "name": "peaq-sdk-supabase",
+  "version": "1.0.0",
+  "keywords": [
+    "evm",
+    "peaq",
+    "solidity",
+    "smart",
+    "contracts"
+  ],
+  "author": {
+    "name": "Lopez Gonzalo",
+    "email": "gonzalo@smtv.dev"
+  },
+  "engines": {
+    "node": "^22.0.0",
+    "npm": ">= 11.0.0"
+  },
+  "scripts": {
+    "build": "tsc ./peaqSDK/**/**.ts"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^5.1.0",
+    "@peaq-network/sdk": "^0.7.2",
+    "axios": "^1.7.9",
+    "dotenv": "^10.0.0",
+    "ethers": "^6.13.4",
+    "ts-node": "^10.9.2",
+    "web3": "^4.16.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "typescript": "^5.7.2"
+  }
+}
