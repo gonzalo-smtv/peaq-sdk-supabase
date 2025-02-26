@@ -2,13 +2,12 @@ import "jsr:@supabase/functions-js/edge-runtime.d.ts";
 import { sdk } from "../peaqSDK.ts";
 
 Deno.serve(async (req) => {
-  const { email, tag, tags } = await req.json();
+  const { didAddress, email, tag } = await req.json();
 
-  const res = await sdk.storage.storeData({
-    customTag: tag,
+  const res = await sdk.identity.addAttribute({
+    didAddress,
     email,
     tag,
-    tags,
   });
 
   return new Response(JSON.stringify({ hash: res.hash }), {
