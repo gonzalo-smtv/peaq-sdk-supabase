@@ -3,7 +3,8 @@ import axios from "npm:axios";
 
 import { Keyring } from "npm:@polkadot/keyring";
 import { u8aToHex, stringToU8a } from "npm:@polkadot/util";
-import { Sdk } from "npm:@peaq-network/sdk";
+// import { Sdk } from "npm:@peaq-network/sdk";
+import { Sdk } from "npm:smtv-peaq-network-sdk";
 import { CustomDocumentFields } from "npm:@peaq-network/sdk/src/modules/did";
 
 const abi = [
@@ -483,18 +484,12 @@ export class PeaqSDK {
     };
 
     // FIXME: this don't work, apparently the SDK is imported in Supabase edge functions
-    // const did_hash = await Sdk.generateDidDocument({
-    //   address: didAddress,
-    //   customDocumentFields: customFields,
-    // });
+    const did_hash = await Sdk.generateDidDocument({
+      address: didAddress,
+      customDocumentFields: customFields,
+    });
 
-    // return did_hash.value;
-
-    // Sdk.generateDidDocument
-    // Sdk
-    Keyring;
-
-    return "";
+    return did_hash.value;
   }
 
   // Service endpoints

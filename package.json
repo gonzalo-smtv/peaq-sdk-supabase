@@ -25,6 +25,7 @@
     "axios": "^1.7.9",
     "dotenv": "^10.0.0",
     "ethers": "^6.13.4",
+    "smtv-peaq-network-sdk": "^2.0.0",
     "ts-node": "^10.9.2",
     "web3": "^4.16.0"
   },

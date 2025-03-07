@@ -25,6 +25,12 @@ supabase functions new my-function-name
 supabase start
 ```
 
+### Check Edge Functions Logs
+
+```bash
+docker logs -f supabase_edge_runtime_peaq-supabase
+```
+
 ### Stop Edge Functions
 
 ```bash
