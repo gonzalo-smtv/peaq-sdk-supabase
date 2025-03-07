@@ -73,8 +73,14 @@ curl -i --location --request POST 'https://YOUR_PROJECT_REF.functions.supabase.c
     --data '{"name": "test"}'
 ```
 
+### Deploy env variables
+
+```bash
+supabase secrets set --env-file .env
+```
+
 ## Important Notes
 
 - Edge Functions run on Deno runtime
 - Local development requires Supabase CLI version 1.0.0 or higher
-- Functions must be deployed to be accessible in production
+- Functions and environments must be deployed to be accessible in production
